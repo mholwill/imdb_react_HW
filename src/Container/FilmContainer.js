@@ -33,6 +33,11 @@ export default class FilmContainer extends Component {
                 }
               ]
         }
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(){
+        window.open("https://www.imdb.com/calendar/?region=gb")
     }
 
   render() {
@@ -40,7 +45,7 @@ export default class FilmContainer extends Component {
       <div className="film-container">
         <h1>Upcoming Film Releases for UK</h1>
         <FilmList films={this.state.films}></FilmList>
-        <button href="https://www.imdb.com/calendar/?region=gb">View more Upcoming Films</button>
+        <button type="button" onClick={this.handleClick}>View more upcoming releases</button>
       </div>
     )
   }

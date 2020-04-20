@@ -5,7 +5,7 @@ export default class FilmList extends Component {
   render() {
 
     const filmNodes = this.props.films.map(film => {
-        return <FilmItem name={film.name} key={film.id}></FilmItem>
+        return <FilmItem name={film.name} url={film.url} key={film.id}></FilmItem>
       })
 
     return (
